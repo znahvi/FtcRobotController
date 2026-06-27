@@ -2,6 +2,8 @@ package org.firstinspires.ftc.teamcode;
 
 public class RobotLocationPractice {
     double angle;
+    double x;
+    double y;
 
     // constructor method
     public RobotLocationPractice(double angle) {
@@ -27,5 +29,36 @@ public class RobotLocationPractice {
 
     public void setAngle(double angle) {
         this.angle = angle;
+    }
+
+    public double getAngle() {
+        return this.angle;
+    }
+
+    // change function
+    public void changeX(double changeAmount) {
+        x += changeAmount;
+    }
+
+    // setter function
+    public void setX(double x) {
+        this.x = x;
+    }
+    // getter function
+    public double getX() {
+        return this.x;
+    }
+
+
+    public void changeY(double changeAmount) {
+        y += changeAmount;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public double getY() {
+        return this.y;
     }
 }

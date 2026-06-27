@@ -11,6 +11,7 @@ public class UseRobotLocationOpMode extends OpMode {
     @Override
     public void init() {
         robotLocationPractice.setAngle(0);
+        robotLocationPractice.setX(0);
     }
 
     @Override
@@ -22,6 +23,24 @@ public class UseRobotLocationOpMode extends OpMode {
             robotLocationPractice.turnRobot(-0.1);
         }
 
+        if (gamepad1.dpad_left) {
+            robotLocationPractice.changeX(0.1);
+        }
+        else if (gamepad1.dpad_right) {
+            robotLocationPractice.changeX(-0.1);
+        }
+
+        if (gamepad1.dpad_down) {
+            robotLocationPractice.changeY(0.1);
+        }
+        else if (gamepad1.dpad_up) {
+            robotLocationPractice.changeY(-0.1);
+        }
+
         telemetry.addData("Heading", robotLocationPractice.getHeading());
+        telemetry.addData("Angle", robotLocationPractice.getAngle());
+
+        telemetry.addData("X Value", robotLocationPractice.getX());
+        telemetry.addData("Y Value", robotLocationPractice.getY());
     }
 }
